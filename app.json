@@ -9,7 +9,7 @@
       ],
       "scripts": {
         "test-setup": "whoami && node -e 'console.log(process.geteuid())' && npx cypress install && npx cypress cache path && npx cypress cache list && npx cypress info && npx cypress verify || true",
-        "test": "whoami && node -e 'console.log(process.geteuid())' && npm run ci:set-port && npm run test:ci:chrome"
+        "test": "whoami && node -e 'console.log(process.geteuid())' && echo '{\"verified\":true}' > /app/.cache/Cypress/8.3.0/binary_state.json && npm run ci:set-port && npm run test:ci:chrome"
       }
     }
   }
